@@ -1,6 +1,6 @@
 
 *{
-    box-shadow: 0 0 0 1px red;
+    /* box-shadow: 0 0 0 1px red; */
     padding: 0;
     margin: 0;
 
@@ -51,9 +51,17 @@ a{
     color: #000;
 }
 .btnOutline{
-    /* border: 1px solid #fff; */
     box-shadow: 0 0 0 2px #fff;
     color: #fff;
+}
+.goBack{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0.84rem 2.75rem;
+}
+.goBack img{
+    margin-right: 0.8rem;    
 }
 .top{
     padding: 30px 0 260px;
@@ -62,6 +70,20 @@ a{
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: top right;
+}
+.topSection{
+    padding: 37px 0 72px;
+    background-color: #000; 
+}
+.topTitle{
+    width: min(100%,68.5rem);
+    color: #fff;
+    font-size: 10rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+.bold{
+    font-weight: 700;
 }
 .top header{
     display: flex;
