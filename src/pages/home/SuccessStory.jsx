@@ -118,7 +118,7 @@ const storyData=[
 ]
 function SuccessStory() {
   return (
-    <section id="successStory">
+    <section className="successStoryContainer">
         <div className="container">
             <h3 className="title">Our values</h3>
             <ul className="valuesWrapper">
@@ -128,30 +128,34 @@ function SuccessStory() {
                     ))
                 }
             </ul>
-            <h3 className="title">Our success story</h3>
-            <ul className="successWrapper">
-                {
-                    successData.map(item=>(
-                        <SuccessItem
-                        key= {item.year}
-                        info={item} 
-                        employeeIcon={employeeIcon} />
-                    ))
-                }
-            </ul>
-            <h3 className="title">Perks & benefits</h3>
-            <div className="perksWrapper">
-                <ul className="perksList">
-                    {perksData.map(perk=>(
-                        <li key={perk.id}><img src={perk.icon} alt="reload perk" />{perk.name}</li>
-                    ))}
-                </ul>
-                <ul className="perksGallery">
-                    <li><img src={perkImgOne} alt="reload freight perks" /></li>
-                    <li><img src={perkImgOne} alt="reload freight perks" /></li>
-                    <li><img src={perkImgOne} alt="reload freight perks" /></li>
+            <div id="success">
+                <h3 className="title">Our success story</h3>
+                <ul className="successWrapper">
+                    {
+                        successData.map(item=>(
+                            <SuccessItem
+                            key= {item.year}
+                            info={item} 
+                            employeeIcon={employeeIcon} />
+                        ))
+                    }
                 </ul>
             </div>
+            <div>
+                <h3 className="title">Perks & benefits</h3>
+                <div className="perksWrapper">
+                    <ul className="perksList">
+                        {perksData.map(perk=>(
+                            <li key={perk.id}><img src={perk.icon} alt="reload perk" />{perk.name}</li>
+                        ))}
+                    </ul>
+                    <ul className="perksGallery">
+                        <li><img src={perkImgOne} alt="reload freight perks" /></li>
+                        <li><img src={perkImgOne} alt="reload freight perks" /></li>
+                        <li><img src={perkImgOne} alt="reload freight perks" /></li>
+                    </ul>
+                </div>
+            </div>            
             <div className="successContainer">
                 <div className="titleWrapper">
                     <h3 className="title">Success stories</h3>

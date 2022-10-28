@@ -48,7 +48,7 @@ function Stats() {
                 {
                     statsData.map(stat=>(
                         <li className="statItem"
-                        key={stat.id}
+                            key={stat.id}
                         >   <img src={stat.iconUrl} alt="reload statistics" />
                             <h3>{stat.value}</h3>
                             <p>{stat.name}</p>

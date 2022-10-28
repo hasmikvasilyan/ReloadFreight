@@ -2,13 +2,11 @@ import { Link } from 'react-scroll';
 import logo from "../../assets/img/svg/logo.svg";
 import { ReactComponent as FbIcon } from "../../assets/img/svg/fbIcon.svg";
 import { ReactComponent as InstaIcon } from "../../assets/img/svg/instaIcon.svg";
-import "../home/home.css";
 import Partner from '../../components/Partner';
 
 function Footer() {
   return (
-    <footer>
-        
+    <footer id='contacts'>        
         <div className="container">
             <Partner/>
             <div className="footerNav">

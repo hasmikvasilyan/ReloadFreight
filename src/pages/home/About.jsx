@@ -1,8 +1,23 @@
-import AboutImg from '../../assets/img/png/aboutImgOne.png';
-import {ReactComponent as Circle} from '../../assets/img/svg/circle.svg';
+import aboutImg from '../../assets/img/png/aboutImgOne.png';
+import AboutItem from '../../components/AboutItem';
 import ReactPlayer from 'react-player';
 import aboutVideoBg from '../../assets/img/png/aboutVideoBg.png';
 
+const aboutData=[
+    {
+        id:1,
+        title:"About us",
+        text:"Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.",
+        img:aboutImg,    
+    },
+    {
+        id:2,
+        title:"What we do",
+        text:"Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.",
+        img:aboutImg,
+        order:"reverse"
+    }
+]
 
 function About() {
   return (
@@ -14,17 +29,11 @@ function About() {
                 </h2>
                 <button className="btn btnFilled">Join the circle</button>
             </div>
-            <div className="aboutDescription">
-                <div className="aboutImgWrapper">
-                    <img src={AboutImg} alt="about reload" />
-                    <Circle className='circleIcon'/>
-                </div>
-                <div className="aboutTxtWrapper">
-                    <h3 className="title">About us</h3>
-                    <p className="text">Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.</p>
-                </div>
+            <div className="aboutDescriptionContainer">
+                {aboutData.map(item=><AboutItem key={item.id} data={item}/>)}
             </div>
-            <div className="abouPartnership">
+            
+            <div id="landstar" className="abouPartnership">
                 <h3 className="title">Landstar partnership</h3>
                 <p className="text">Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.</p>
                 <div className='playerWrapper'>
