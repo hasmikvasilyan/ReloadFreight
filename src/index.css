@@ -131,6 +131,21 @@ a {
   padding: 15px 24px;
   box-sizing: border-box;
 }
+.topSection{
+  padding: 2rem 0 4.5rem;
+  background-color: #000;
+}
+.topTitle{
+  margin-top: 5.25rem;
+  color: #fff;
+  font-size: 10rem;
+  font-weight: 300; 
+  line-height: 1;
+}
+.topTitle .bold{
+  display: block;
+  font-weight: 700;
+}
 #stats .container {
   padding-top: 80px;
 }
@@ -387,7 +402,7 @@ a {
   font-weight: 400;
   font-size: 1rem;
 }
-.partner {
+.becomePartner{
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -457,10 +472,151 @@ footer .mailAddress {
 .menuIcon {
   display: none;
 }
+.partnersContainer{
+  padding-top: 3rem;
+}
+
+.partnersHeading{
+  display: flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+.partnersHeading .title{
+  margin-bottom: 1rem;
+}
+.partnersHeading .text{
+  margin-bottom: 1rem;
+  width: min(87%,570px);
+  color: #000;
+}
+.partnersHeading .btn{
+  flex-shrink: 0;
+}
+.partnersList{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin: 9.1rem 0 14rem;    
+}
+.partnerItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.partnerItem img{
+  width: 100%;
+  height: auto;
+}
+.partnersInfo{
+  margin-top: 1rem;
+  text-align: center;
+}
+.partnerName{
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.partnerPosition,.partnerTeam{
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.partnerTeam{
+  opacity: 0.5;
+}
+.storiesContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;    
+  padding-top: 4.5rem;
+}
+.storiesContainer img{
+  width: auto;
+  height: 200px;
+  object-fit: cover;
+}
+.storiesContainer .storyTitle{
+  font-size: 1.5rem;
+}
+.storyContainer{    
+  background-color: #F2F2F2;
+  border-radius:10px;
+  padding: 1.5rem;
+}
+.storyLink{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.storyAbout{
+  display: flex;
+  flex-direction: column;
+}
+.storyTitle{
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+.storyText{
+  margin-bottom: 1rem;
+  color: #7B7B7B;
+}
+.storyDate{
+  display: flex;
+  align-items: center;    
+  margin-top: auto;
+  color: #7B7B7B;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.storyYear{
+  display: flex;
+  align-items: center;
+}
+.storyYear:before{
+  margin: 0 0.5rem;
+  content: "•";
+  font-size: 21px;
+  font-weight: 700;
+
+}
+.smallerContainer{
+  margin: 0 auto;
+  width: min(100%,786px);
+}
+.smallerContainer .title{
+  margin-bottom: 1rem;
+}
+.smallerContainer .text{
+  margin-bottom: 2.5rem;
+  color: #000;
+}
+.smallerContainer .storyImg{
+  width: 100%;
+  height: auto;
+}
+.blog .storiesContainer{
+  margin-bottom: 18.5rem;
+}
+
 @media screen and (max-width: 1200px) {
-  .top {
-    background-size: 55%;
+  .topTitle{
+      font-size: 8rem;
   }
+  /* .top {
+    background-size: 55%;
+  } */
   .navBar {
     gap: 2rem;
   }
@@ -472,8 +628,36 @@ footer .mailAddress {
   }
 }
 @media screen and (max-width: 1024px) {
+  .title{
+      font-size: 2rem;
+  }
+  .text{
+      font-size: 1rem;
+  }
+  .btn{
+      padding: 15px 35px;
+      font-size: 1rem;
+  }
+  .partnersHeading{
+      align-items: center;
+  }
+  .username:before {
+      content:"User name";
+  }
+  .topTitle{
+      margin-top: 4.25rem;
+  }
 }
 @media screen and (max-width: 768px) {
+  .title{
+      font-size: 1.8rem;
+  }
+  .logo img {
+      width: 93px;
+  }
+  .topTitle {
+      font-size: 5.5rem;
+  }
   .navBar {
     position: fixed;
     flex-direction: column;
@@ -486,4 +670,78 @@ footer .mailAddress {
     transform: translateX(0);
     transition: 0.5s ease-in;
   }
+  .partnersHeading{
+      flex-wrap: wrap;
+  }
+  .partnersList { 
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3rem;
+      margin: 6.5rem 0 11rem;
+  }
+  .partnerName{
+      font-size: 1rem;
+  }
+  .partnerItem{
+      margin-bottom: 0;
+  }
+  .partnerPosition, .partnerTeam {
+      font-size: 0.875rem;
+  }
+  .becomePartner{
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+  }
+  .titleWrapper{
+      margin-bottom: 1rem;
+  }
+  .footerNav{
+      flex-wrap: wrap;
+  }
+  .footerMenu{
+      flex-direction: column;
+      flex-basis: 100%;
+      order: 3;
+  }
+  .footerNav{
+      margin-bottom: 1.5rem;
+  }
+  .footerMenu a{
+      margin: 1rem 0 0;
+  }
+  footer .contacts {
+      flex-direction: column;
+  }
+  footer#contacts .contacts>* {
+      margin: 0.5rem 0 0;
+  }
+  
 }
+@media screen and (max-width: 480px) {
+  .partnersHeading{
+      flex-wrap: wrap;
+  }
+  .partnersList { 
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 3rem;
+  }    
+  .title {
+      font-size: 1.5rem;
+  }
+  .titleWrapper {
+      margin-bottom: 0.5rem;
+  }
+  .topTitle {
+      font-size: 5rem;
+  }
+  .topTitle {
+      margin-top: 4.5rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .titleWrapper{
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+

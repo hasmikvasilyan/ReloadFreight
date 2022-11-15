@@ -18,7 +18,7 @@ body{
 }
 .partnersHeading .text{
     margin-bottom: 1rem;
-    width: min(100%,683px);
+    width: min(87%,570px);
     color: #000;
 }
 .partnersHeading .btn{
@@ -26,7 +26,7 @@ body{
 }
 .partnersList{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2.5rem;
     margin: 9.1rem 0 14rem;    
 }
@@ -38,8 +38,8 @@ body{
     margin-bottom: 3rem;
 }
 .partnerItem img{
-    width: 16.8rem;
-    height: 16.8rem;
+    width: 100%;
+    height: auto;
 }
 .partnersInfo{
     margin-top: 1rem;
@@ -50,6 +50,9 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .partnerPosition,.partnerTeam{
     color: #000;
@@ -136,9 +139,4 @@ body{
 }
 .blog .storiesContainer{
     margin-bottom: 18.5rem;
-}
-@media screen and (max-width: 1024px) {
-    .username:before {
-        content:"User name";
-    }
 }
