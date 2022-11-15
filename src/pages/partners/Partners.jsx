@@ -13,98 +13,98 @@ const partnersData=[
         img: photo,
     },
     {
-        id:1,
+        id:2,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:3,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:4,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:5,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:6,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:7,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:8,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:9,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:10,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:11,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:12,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:13,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:14,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
         img: photo,
     },
     {
-        id:1,
+        id:15,
         name: "Name",
         position: "Sales Agent",
         team:"Yellow team",
@@ -114,25 +114,25 @@ const partnersData=[
 function Partners() {
   return (
     <>
-        <TopSection text={"Meet our"} boldText={"Partners"}/>
-        <section className="partnersContainer">
-            <div className="container">
-                <div className="partnersHeading">
-                    <div>
-                        <h3 className="title">Meet our partners</h3>
-                        <p className="text">
-                            Be a part of a young, fun & enthusiastic team of ninjas, who believe that positive atmosphere and corporate culture ensure the best team results
-                        </p>                    
-                    </div>
-                    <button className="btn btnFilled">Join the circle</button>
+    <TopSection text={"Meet our"} boldText={"Partners"}/>
+    <section className="partnersContainer">
+        <div className="container">
+            <div className="partnersHeading">
+                <div>
+                    <h3 className="title">Meet our partners</h3>
+                    <p className="text">
+                        Be a part of a young, fun & enthusiastic team of ninjas, who believe that positive atmosphere and corporate culture ensure the best team results
+                    </p>                    
                 </div>
-                <ul className="partnersList">
-                    {partnersData.map(partner=><PartnerItem key={partner.id} id={partner.id} partner={partner}/>)}
-                </ul>
-                
+                <button className="btn btnFilled">Join the circle</button>
             </div>
-        </section>
-        <Footer/>
+            <ul className="partnersList">
+                {partnersData.map(partner=><PartnerItem id={partner.id} partner={partner}/>)}
+            </ul>
+            
+        </div>
+    </section>
+    <Footer/>
     </>
   )
 }

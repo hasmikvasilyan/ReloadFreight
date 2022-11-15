@@ -2,7 +2,6 @@ import React from 'react'
 import {useNavigate, useParams} from 'react-router-dom'
 import Story from '../../components/Story';
 import story from '../../assets/img/png/story.png'
-import Partner from '../../components/Partner';
 import Footer from '../home/Footer';
 import  backIcon from '../../assets/img/svg/backIcon.svg'
 
