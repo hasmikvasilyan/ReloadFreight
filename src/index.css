@@ -9,7 +9,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 * {
-  /* box-shadow: 0 0 0 1px red; */
+  box-shadow: 0 0 0 1px red;
   padding: 0;
   margin: 0;
 }
@@ -64,11 +64,11 @@ a {
   color: #fff;
 }
 .top {
-  height: 100vh;
+  /* height: 100vh; */
   /* padding-bottom: 110px; */
   background-color: #000;
   background-image: url("../src/assets/img/png/mainBg.png");
-  background-origin: content-box;
+  background-origin: padding-box;
   /* background-size: 60%; */
   background-repeat: no-repeat;
   background-position: top right;
@@ -131,18 +131,18 @@ a {
   padding: 15px 24px;
   box-sizing: border-box;
 }
-.topSection{
+.topSection {
   padding: 2rem 0 4.5rem;
   background-color: #000;
 }
-.topTitle{
+.topTitle {
   margin-top: 5.25rem;
   color: #fff;
   font-size: 10rem;
-  font-weight: 300; 
+  font-weight: 300;
   line-height: 1;
 }
-.topTitle .bold{
+.topTitle .bold {
   display: block;
   font-weight: 700;
 }
@@ -159,7 +159,7 @@ a {
 }
 .statItem h3 {
   margin-bottom: 5px;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #000;
 }
@@ -185,7 +185,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 48px 0 200px;
+  margin: 3rem 0 12.5rem;
 }
 .aboutHeading h2 {
   color: #fff;
@@ -202,7 +202,7 @@ a {
   justify-content: space-between;
   gap: 2.5rem;
   align-items: center;
-  margin-bottom: 175px;
+  margin-bottom: 7rem;
 }
 
 .aboutImgWrapper {
@@ -211,7 +211,8 @@ a {
   flex: 1;
 }
 .aboutImgWrapper img {
-  width: 100%;
+  position: relative;
+  width: 66.5%;
   max-width: 385px;
   height: auto;
 }
@@ -254,6 +255,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5rem;
+  gap: 6.7%;
   margin: 9.1rem 0 12.5rem;
 }
 .valuesWrapper li {
@@ -265,6 +267,8 @@ a {
   border: 6px dashed #000;
   text-align: center;
   box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .successWrapper {
   display: grid;
@@ -316,6 +320,7 @@ a {
   background-color: #f3bd19;
   color: #000;
   font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.5;
 }
 .emplArea sup {
@@ -324,10 +329,10 @@ a {
 .perksWrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-top: 3rem;
 }
 .perksList {
-  flex-basis: 45%;
+  flex-basis: 48%;
 }
 .perksList li {
   display: flex;
@@ -344,33 +349,39 @@ a {
 .perksGallery {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 45%;
 }
 .perksGallery li {
   display: flex;
 }
-
+.perksGallery li img {
+  aspect-ratio: 1/1;
+  height: auto;
+}
 .perksGallery li:first-child,
 .perksGallery li:last-child {
   justify-content: flex-end;
 }
 .perksGallery li:first-child img {
-  width: 14.4rem;
-  height: 14.4rem;
+  max-width: 14.4rem;
+  width: 60%;
+  /* height: 14.4rem; */
 }
 .perksGallery li:nth-child(2) {
   transform: translateY(-20%);
 }
 .perksGallery li:nth-child(2) img {
-  width: 13.9rem;
-  height: 13.9rem;
+  max-width: 13.9rem;
+  width: 50%;
+  /* height: 13.9rem; */
 }
 .perksGallery li:last-child {
   transform: translateY(-70%);
 }
 .perksGallery li:last-child img {
-  width: 11.3rem;
-  height: 11.3rem;
+  width: 40%;
+  max-width: 11.3rem;
+  /* height: 11.3rem; */
 }
 .successContainer .titleWrapper {
   margin-bottom: 2.75rem;
@@ -402,7 +413,7 @@ a {
   font-weight: 400;
   font-size: 1rem;
 }
-.becomePartner{
+.becomePartner {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -472,49 +483,49 @@ footer .mailAddress {
 .menuIcon {
   display: none;
 }
-.partnersContainer{
+.partnersContainer {
   padding-top: 3rem;
 }
 
-.partnersHeading{
+.partnersHeading {
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 5rem;
 }
-.partnersHeading .title{
+.partnersHeading .title {
   margin-bottom: 1rem;
 }
-.partnersHeading .text{
+.partnersHeading .text {
   margin-bottom: 1rem;
-  width: min(87%,570px);
+  width: min(87%, 570px);
   color: #000;
 }
-.partnersHeading .btn{
+.partnersHeading .btn {
   flex-shrink: 0;
 }
-.partnersList{
+.partnersList {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 2.5rem;
-  margin: 9.1rem 0 14rem;    
+  margin: 9.1rem 0 14rem;
 }
-.partnerItem{
+.partnerItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
 }
-.partnerItem img{
+.partnerItem img {
   width: 100%;
   height: auto;
 }
-.partnersInfo{
+.partnersInfo {
   margin-top: 1rem;
   text-align: center;
 }
-.partnerName{
+.partnerName {
   color: #000;
   font-size: 1.5rem;
   font-weight: 700;
@@ -523,96 +534,96 @@ footer .mailAddress {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.partnerPosition,.partnerTeam{
+.partnerPosition,
+.partnerTeam {
   color: #000;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5;
 }
-.partnerTeam{
+.partnerTeam {
   opacity: 0.5;
 }
-.storiesContainer{
+.storiesContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;    
+  gap: 2.5rem;
   padding-top: 4.5rem;
 }
-.storiesContainer img{
+.storiesContainer img {
   width: auto;
   height: 200px;
   object-fit: cover;
 }
-.storiesContainer .storyTitle{
+.storiesContainer .storyTitle {
   font-size: 1.5rem;
 }
-.storyContainer{    
-  background-color: #F2F2F2;
-  border-radius:10px;
+.storyContainer {
+  background-color: #f2f2f2;
+  border-radius: 10px;
   padding: 1.5rem;
 }
-.storyLink{
+.storyLink {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 }
-.storyAbout{
+.storyAbout {
   display: flex;
   flex-direction: column;
 }
-.storyTitle{
+.storyTitle {
   margin-bottom: 1rem;
   color: #000;
   font-weight: 700;
   font-size: 2rem;
   line-height: 1.3;
 }
-.storyText{
+.storyText {
   margin-bottom: 1rem;
-  color: #7B7B7B;
+  color: #7b7b7b;
 }
-.storyDate{
+.storyDate {
   display: flex;
-  align-items: center;    
+  align-items: center;
   margin-top: auto;
-  color: #7B7B7B;
+  color: #7b7b7b;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5;
 }
-.storyYear{
+.storyYear {
   display: flex;
   align-items: center;
 }
-.storyYear:before{
+.storyYear:before {
   margin: 0 0.5rem;
   content: "•";
   font-size: 21px;
   font-weight: 700;
-
 }
-.smallerContainer{
+.smallerContainer {
   margin: 0 auto;
-  width: min(100%,786px);
+  width: min(100%, 786px);
 }
-.smallerContainer .title{
+.smallerContainer .title {
   margin-bottom: 1rem;
 }
-.smallerContainer .text{
+.smallerContainer .text {
   margin-bottom: 2.5rem;
   color: #000;
 }
-.smallerContainer .storyImg{
+.smallerContainer .storyImg {
   width: 100%;
   height: auto;
 }
-.blog .storiesContainer{
+.blog .storiesContainer {
   margin-bottom: 18.5rem;
 }
 
 @media screen and (max-width: 1200px) {
-  .topTitle{
-      font-size: 8rem;
+  .topTitle {
+    font-size: 8rem;
   }
   /* .top {
     background-size: 55%;
@@ -626,37 +637,107 @@ footer .mailAddress {
   .aboutHeading h2 {
     font-size: 2.1rem;
   }
+  .successWrapper li {
+    padding: 0.65rem;
+  }
+  .successInfoWrapper > div {
+    padding: 0.63rem 0.3rem;
+    font-size: 1.3rem;
+  }
+  .successInfoWrapper > div img {
+    width: 40%;
+    max-width: 38px;
+    margin-right: 0.35rem;
+  }
+  .perksList li {
+    font-size: 1.7rem;
+  }
 }
 @media screen and (max-width: 1024px) {
-  .title{
-      font-size: 2rem;
+  .title {
+    font-size: 2rem;
   }
-  .text{
-      font-size: 1rem;
+  .text {
+    font-size: 1rem;
   }
-  .btn{
-      padding: 15px 35px;
-      font-size: 1rem;
+  .btn {
+    padding: 15px 35px;
+    font-size: 1rem;
+    line-height: 1.7;
   }
-  .partnersHeading{
-      align-items: center;
+  .partnersHeading {
+    align-items: center;
   }
   .username:before {
-      content:"User name";
+    content: "User name";
   }
-  .topTitle{
-      margin-top: 4.25rem;
+  .aboutHeading {
+    margin: 2.5rem 0 7.5rem;
+  }
+  .aboutHeading h2 {
+    font-size: 1.5rem;
+  }
+  .aboutImgWrapper img {
+    width: auto;
+  }
+  .aboutImgWrapper img:first-child {
+    left: 50%;
+    transform: translateX(-75%);
+  }
+  .aboutImgWrapper .circleIcon {
+    transform: translateX(-25%);
+  }
+  .valuesWrapper {
+    margin: 5.5rem 0 8.5rem;
+  }
+  .valuesWrapper li {
+    font-size: 1rem;
+  }
+  .growthTitle {
+    font-size: 1.5rem;
+  }
+  .successWrapper {
+    gap: 1rem;
+  }
+  .successInfoWrapper > div {
+    font-size: 1rem;
+  }
+  .emplArea sup {
+    font-size: 0.8rem;
+  }
+  .successWrapper {
+    margin-bottom: 8rem;
+  }
+  .storyContent {
+    padding: 1rem;
+  }
+  .storyContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .perksList li {
+    margin-bottom: 0.6rem;
+    font-size: 1.25rem;
+  }
+  .topTitle {
+    margin-top: 4.25rem;
+  }
+  .statItem h3 {
+    font-size: 2rem;
+  }
+  .statItem p {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .title{
-      font-size: 1.8rem;
+  .title {
+    font-size: 1.8rem;
   }
   .logo img {
-      width: 93px;
+    width: 93px;
   }
   .topTitle {
-      font-size: 5.5rem;
+    font-size: 5.5rem;
   }
   .navBar {
     position: fixed;
@@ -670,78 +751,104 @@ footer .mailAddress {
     transform: translateX(0);
     transition: 0.5s ease-in;
   }
-  .partnersHeading{
-      flex-wrap: wrap;
+  .statsWrapper {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .partnersList { 
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 3rem;
-      margin: 6.5rem 0 11rem;
+  .statItem {
+    flex-basis: 50%;
+    margin-bottom: 3rem;
+    text-align: center;
   }
-  .partnerName{
-      font-size: 1rem;
+  .aboutHeading {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .partnerItem{
-      margin-bottom: 0;
+  .aboutHeading h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
   }
-  .partnerPosition, .partnerTeam {
-      font-size: 0.875rem;
+  .aboutDescription {
+    flex-direction: column;
+    gap: 2.25rem;
+    margin-bottom: 7.5rem;
   }
-  .becomePartner{
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1.5rem;
+  .aboutTxtWrapper {
+    text-align: center;
   }
-  .titleWrapper{
-      margin-bottom: 1rem;
+  .partnersHeading {
+    flex-wrap: wrap;
   }
-  .footerNav{
-      flex-wrap: wrap;
+  .partnersList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    margin: 6.5rem 0 11rem;
   }
-  .footerMenu{
-      flex-direction: column;
-      flex-basis: 100%;
-      order: 3;
+  .partnerName {
+    font-size: 1rem;
   }
-  .footerNav{
-      margin-bottom: 1.5rem;
+  .partnerItem {
+    margin-bottom: 0;
   }
-  .footerMenu a{
-      margin: 1rem 0 0;
+  .partnerPosition,
+  .partnerTeam {
+    font-size: 0.875rem;
   }
-  footer .contacts {
-      flex-direction: column;
-  }
-  footer#contacts .contacts>* {
-      margin: 0.5rem 0 0;
-  }
-  
-}
-@media screen and (max-width: 480px) {
-  .partnersHeading{
-      flex-wrap: wrap;
-  }
-  .partnersList { 
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 3rem;
-  }    
-  .title {
-      font-size: 1.5rem;
+  .becomePartner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
   }
   .titleWrapper {
-      margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .footerNav {
+    flex-wrap: wrap;
+  }
+  .footerMenu {
+    flex-direction: column;
+    flex-basis: 100%;
+    order: 3;
+  }
+  .footerNav {
+    margin-bottom: 1.5rem;
+  }
+  .footerMenu a {
+    margin: 1rem 0 0;
+  }
+  footer .contacts {
+    flex-direction: column;
+  }
+  footer#contacts .contacts > * {
+    margin: 0.5rem 0 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .partnersHeading {
+    flex-wrap: wrap;
+  }
+  .partnersList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .titleWrapper {
+    margin-bottom: 0.5rem;
   }
   .topTitle {
-      font-size: 5rem;
+    font-size: 5rem;
   }
   .topTitle {
-      margin-top: 4.5rem;
+    margin-top: 4.5rem;
   }
 }
 @media screen and (max-width: 420px) {
-  .titleWrapper{
-      flex-direction: column;
-      align-items: flex-start;
+  .titleWrapper {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
-

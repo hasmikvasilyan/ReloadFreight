@@ -20,7 +20,7 @@ const statsData = [
   },
   {
     id: 2,
-    name: "Mile",
+    name: "Miles",
     value: numberWithCommas(3258740),
     iconUrl: milesIcon,
   },
