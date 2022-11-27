@@ -4,8 +4,6 @@ import About from "./About";
 import SuccessStory from "./SuccessStory";
 import Footer from "./Footer";
 
-
-
 function Home() {
   return (
     <>

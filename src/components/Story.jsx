@@ -1,14 +1,14 @@
 
 import {Link} from 'react-router-dom';
 
-function Story({id,img,title,text,date}) {   
+function Story({id,img,title,text,date,className}) {   
 
   const formattedDate = new Date(date);
-  const [day,month,year]= [formattedDate.getDate(),formattedDate.toLocaleString('en-us', { month: 'short' }), formattedDate.getFullYear()];
+  const [day,month,year]= [formattedDate.getDate(),formattedDate.toLocaleString('en-us', { month: 'long' }), formattedDate.getFullYear()];
        
   return (
     <div className="storyContainer">
-      <Link to={`/success-stories/${id}`} className="storyLink"> 
+      <Link to={`/success-stories/${id}`} className={`storyLink ${className||""}`}> 
         <img src={img} alt="reload success story"/>
         <div className="storyAbout">
             <h4 className="storyTitle">{title}</h4>
