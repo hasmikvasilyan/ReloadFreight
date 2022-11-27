@@ -26,6 +26,7 @@ function StoryDetails() {
     const navigate=useNavigate();
   return (
     <>
+    <div className='storyBody'>
     <div className='container blog'>
         <button className="btn goBack" onClick={()=>navigate(-1)}> <img src={backIcon} alt="join realod freight" /> Join the circle</button>
         <Story 
@@ -34,6 +35,7 @@ function StoryDetails() {
             title={storiesData[0].title}
             text={storiesData[0].text}
             date={storiesData[0].date}    
+            className="topStoryLink"   
         />
         <div className="smallerContainer">
             <p className="text">Working from home can be so much easier and more comfortable with the appropriate accessories in place. This said, remote work gadgets can help individuals reap the full benefits of working from home
@@ -64,6 +66,7 @@ We’ve taken some of the most common issues employees might face along with mor
                     />
                 ))}
             </div>
+    </div>
     </div>
     <Footer/>
     </>

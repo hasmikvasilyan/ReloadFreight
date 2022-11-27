@@ -1,53 +1,67 @@
-import { useNavigate } from 'react-router-dom'
 import Story from '../../components/Story'
 import TopSection from '../../components/TopSection'
 import story from '../../assets/img/png/story.png'
+import Footer from '../home/Footer'
 
 const storiesData=[
     {
         id: 1,
         img:story,
-        title: "2020 successes & improvements in office life",
+        title: "2020 successes & improvements in office lifeee",
         text: "With 2021 just around the corner, our Reload Freight vision has become clearer than ever!...",
-        date: "2022-08-02T13:32"
+        date: "2022-08-02T13:32",
+        top:true,
     },
     {
         id: 2,
         img:story,
-        title: "2020 successes & improvements in office life",
+        title: "5 #MustRead Books for sales agents",
         text: "With 2021 just around the corner, our Reload Freight vision has become clearer than ever!...",
-        date: "2022-08-02T13:32"
+        date: "2022-08-02T13:32",
+        top:false,
     },
     {
         id: 3,
         img:story,
-        title: "2020 successes & improvements in office life",
+        title: "5 #MustRead Books for sales agents",
         text: "With 2021 just around the corner, our Reload Freight vision has become clearer than ever!...",
-        date: "2022-08-02T13:32"
+        date: "2022-08-02T13:32",
+        top:false,
     },
     {
         id: 4,
         img:story,
-        title: "2020 successes & improvements in office life",
+        title: "5 #MustRead Books for sales agents",
         text: "With 2021 just around the corner, our Reload Freight vision has become clearer than ever!...",
-        date: "2022-08-02T13:32"
+        date: "2022-08-02T13:32",
+        top:false,
     },
     {
         id: 5,
         img:story,
-        title: "2020 successes & improvements in office life",
+        title: "5 #MustRead Books for sales agents",
         text: "With 2021 just around the corner, our Reload Freight vision has become clearer than ever!...",
-        date: "2022-08-02T13:32"
+        date: "2022-08-02T13:32",
+        top:false,
     },
 
 ]
 function Stories() {
-    
+    const [topStory]=storiesData.filter(data=>data.top)
     
   return (
     <>
-        <TopSection text={"Success"} boldText={"Stories"}/>        
-        <div className="container">
+        <TopSection text={"Success"} boldText={"Stories"}/>   
+        <div className="storyBody">     
+            <div className="container">
+                <Story 
+                    id={topStory.id}
+                    img={topStory.img}
+                    title={topStory.title}
+                    text={topStory.text}
+                    date={topStory.date}
+                    className="topStoryLink"                        
+                />
                 <div className='storiesContainer'>
                     {storiesData.map(story=>(
                         <Story 
@@ -59,7 +73,9 @@ function Stories() {
                         />
                     ))}
                 </div>
+            </div>
         </div>
+        <Footer/>
     </>
   )
 }

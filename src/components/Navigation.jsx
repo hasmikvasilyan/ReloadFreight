@@ -49,9 +49,8 @@ function Navigation() {
         {
             navlinks.map(link=>(
                 <li  key={link.id} >
-                    <Link 
-                       
-                        className={`navLink${link.isBtn?" btn btnFilledWhite":""}`} 
+                    <Link                        
+                        className={`${link.isBtn?" btn btnFilledWhite":"navLink"}`} 
                         to={link.to}
                         spy={true}
                         smooth={true}
