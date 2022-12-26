@@ -2,6 +2,7 @@ import aboutImg from "../../assets/img/png/aboutImgOne.png";
 import AboutItem from "../../components/AboutItem";
 import ReactPlayer from "react-player";
 import aboutVideoBg from "../../assets/img/png/aboutVideoBg.png";
+import { ReactComponent as PlayIcon } from "../../assets/img/svg/playIcon.svg";
 
 const aboutData = [
   {
@@ -49,6 +50,7 @@ function About() {
             <ReactPlayer
               className="player"
               url="https://www.youtube.com/watch?v=OmibDVPx1qA"
+              playIcon={<PlayIcon />}
               light={aboutVideoBg}
               width="100%"
               height="647px"

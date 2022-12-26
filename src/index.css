@@ -9,7 +9,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 * {
-  box-shadow: 0 0 0 1px red;
+  /* box-shadow: 0 0 0 1px red; */
   padding: 0;
   margin: 0;
 }
@@ -20,8 +20,8 @@ a {
   text-decoration: none;
 }
 .container {
-  width: 100%;
-  max-width: 1250px;
+  width: 63%;
+  min-width: 1200px;
   padding: 0 25px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -64,19 +64,27 @@ a {
   color: #fff;
 }
 .top {
-  /* height: 100vh; */
-  /* padding-bottom: 110px; */
+  height: 100vh;
+  min-height: 750px;
+  padding-bottom: 110px;
   background-color: #000;
+  box-sizing: border-box;
+  /* background-size: contain; */
+}
+.topBack {
+  height: 100%;
   background-image: url("../src/assets/img/png/mainBg.png");
-  background-origin: padding-box;
-  /* background-size: 60%; */
   background-repeat: no-repeat;
   background-position: top right;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  /* background-clip: border-box; */
+  /* background-origin: content-box; */
+  /* background-size: contain; */
+  background-size: 43%;
 }
 .top .container {
+  height: 100%;
   padding-top: 30px;
-  padding-bottom: 110px;
 }
 .top header {
   display: flex;
@@ -110,9 +118,11 @@ a {
   margin-right: 25px;
 }
 .sloganWrapper {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 150px;
+  width: 46.5%;
+  min-width: 430px;
+  top: 40%;
+  position: relative;
+  transform: translateY(-50%);
 }
 .slogan {
   margin-bottom: 40px;
@@ -172,9 +182,7 @@ a {
   position: relative;
   transform: translateY(30%);
 }
-.player {
-  width: 100%;
-}
+
 #about {
   background-color: #000;
 }
@@ -220,7 +228,6 @@ a {
   z-index: 1;
 }
 .circleIcon {
-  position: relative;
   transform: translateX(-50%);
 }
 .reverse .circleIcon {
@@ -622,22 +629,29 @@ footer .mailAddress {
 }
 
 @media screen and (max-width: 1200px) {
+  .container {
+    min-width: 100%;
+  }
   .topTitle {
     font-size: 8rem;
   }
-  /* .top {
-    background-size: 55%;
-  } */
+  .top {
+    background-size: 50%;
+  }
   .navBar {
     gap: 2rem;
   }
+  .btn {
+    padding: 15px 35px;
+  }
   .slogan {
-    font-size: 3.7rem;
+    font-size: 3.8rem;
   }
   .aboutHeading h2 {
     font-size: 2.1rem;
   }
-  #stats .player{
+  .player,
+  .player svg {
     height: 500px !important;
   }
   .successWrapper li {
@@ -664,9 +678,26 @@ footer .mailAddress {
     font-size: 1rem;
   }
   .btn {
-    padding: 15px 35px;
     font-size: 1rem;
     line-height: 1.7;
+  }
+  .top {
+    min-height: 600px;
+  }
+  .menuIcon {
+    display: block;
+  }
+  .navBar {
+    position: fixed;
+    flex-direction: column;
+    right: 0;
+    width: min(100%, 350px);
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  .navBar.active {
+    transform: translateX(0);
+    transition: 0.5s ease-in;
   }
   .partnersHeading {
     align-items: center;
@@ -680,14 +711,7 @@ footer .mailAddress {
   .aboutHeading h2 {
     font-size: 1.5rem;
   }
-  .aboutImgWrapper img {
-    /* width: auto; */
-  }
-   .aboutImgWrapper img:first-child {
-    /* left: 50%;
-    transform: translateX(-75%); */
-  }
-  .aboutDescription:first-child .aboutImgWrapper .circleIcon {
+  .regular .circleIcon {
     transform: translateX(-50%);
   }
   .valuesWrapper {
@@ -717,7 +741,6 @@ footer .mailAddress {
   .storyContent h3 {
     font-size: 1.1rem;
   }
-
   .perksList li {
     margin-bottom: 0.6rem;
     font-size: 1.25rem;
@@ -742,18 +765,6 @@ footer .mailAddress {
   .topTitle {
     font-size: 5.5rem;
   }
-  .navBar {
-    position: fixed;
-    flex-direction: column;
-    right: 0;
-    width: min(100%, 350px);
-    transform: translateX(100%);
-    transition: 0.5s ease-in;
-  }
-  .navBar.active {
-    transform: translateX(0);
-    transition: 0.5s ease-in;
-  }
   .statsWrapper {
     flex-wrap: wrap;
     justify-content: center;
@@ -762,6 +773,10 @@ footer .mailAddress {
     flex-basis: 50%;
     margin-bottom: 3rem;
     text-align: center;
+  }
+  .playerWrapper {
+    transform: translateY(50%);
+    margin: -30% 0 2.5rem;
   }
   .aboutHeading {
     flex-direction: column;
@@ -778,8 +793,82 @@ footer .mailAddress {
     gap: 2.25rem;
     margin-bottom: 7.5rem;
   }
+  .aboutImgWrapper {
+    justify-content: center;
+  }
+  .aboutImgWrapper img {
+    width: 40%;
+  }
+  .regular img:first-child {
+    transform: translateX(25%);
+  }
+  .regular .circleIcon {
+    transform: translateX(-25%);
+  }
+  .reverse .circleIcon {
+    transform: translateX(25%);
+  }
+  .reverse img:first-child {
+    transform: translateX(-25%);
+  }
   .aboutTxtWrapper {
     text-align: center;
+  }
+  .abouPartnership h3,
+  .abouPartnership .text {
+    text-align: center;
+  }
+  .successStoryContainer .container {
+    padding-top: 18rem;
+  }
+  .successStoryContainer .title {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .valuesWrapper {
+    gap: 2rem;
+    margin: 2.5rem 0 7.5rem;
+  }
+  .valuesWrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .valuesWrapper li {
+    width: 100%;
+    max-width: 240px;
+    font-size: 1.5rem;
+  }
+  .successWrapper {
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0 7.5rem;
+  }
+  .successWrapper li {
+    max-width: 285px;
+    padding: 1.25rem;
+  }
+  .perksWrapper {
+    margin: 3rem 0 7.5rem;
+  }
+  .perksGallery {
+    display: none;
+  }
+  .perksList {
+    flex-basis: 100%;
+  }
+  .perksList li {
+    margin-bottom: 1rem;
+  }
+  .successContainer .titleWrapper .btn {
+    display: none;
+  }
+  .successContainer .titleWrapper {
+    margin-bottom: 1.9rem;
+  }
+  .storyWrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
   .partnersHeading {
     flex-wrap: wrap;
@@ -847,6 +936,9 @@ footer .mailAddress {
   }
   .topTitle {
     margin-top: 4.5rem;
+  }
+  .aboutImgWrapper img {
+    width: 60%;
   }
 }
 @media screen and (max-width: 420px) {
