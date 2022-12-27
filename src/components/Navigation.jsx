@@ -44,7 +44,7 @@ function Navigation() {
 
   return (
     <nav>
-      <ul className={`navBar${isNavBarActive ? " c" : ""} `}>
+      <ul className={`navBar${isNavBarActive ? " active" : ""} `}>
         {navlinks.map((link) => (
           <li key={link.id}>
             <Link

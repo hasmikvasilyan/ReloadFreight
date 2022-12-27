@@ -24,7 +24,7 @@ function Top() {
               </Link>
               <Link to="/" className="btn btnOutline">
                 <WatchIcon />
-                Watch the video
+                <span>Watch the video</span>
               </Link>
             </div>
           </div>
