@@ -2,6 +2,8 @@ import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
 import NavIcon from "./NavIcon";
+import { ReactComponent as CloseIcon } from "../assets/img/svg/closeIcon.svg"
+import Logo from "./Logo";
 const navlinks = [
   {
     id: 1,
@@ -41,25 +43,36 @@ function Navigation() {
   const handleMenuOpen = () => {
     setIsNavBarActive((prevState) => !prevState);
   };
-
+  const handleClick=()=>{
+    setIsNavBarActive(false);
+  }
   return (
     <nav>
-      <ul className={`navBar${isNavBarActive ? " active" : ""} `}>
+      <div className={`${isNavBarActive ? "active" : ""} `}>
+      {isNavBarActive&&(
+      <div className="responsiveMenuTop">
+        <Logo/>
+        <CloseIcon/>
+      </div>)}
+      <ul className={`navBar`}>
         {navlinks.map((link) => (
           <li key={link.id}>
             <Link
-              className={`navLink${link.isBtn ? " btn btnFilledWhite" : ""}`}
+              className={`navLink${!link.isBtn ? "": ` btn btnFilled${!isNavBarActive?"White":""}`}`}
               to={link.to}
               spy={true}
               smooth={true}
               hashSpy={true}
+              onClick={handleClick}
             >
               {link.name}
             </Link>
           </li>
         ))}
       </ul>
+      </div>
       <NavIcon onMenuOpen={handleMenuOpen} />
+      
     </nav>
   );
 }

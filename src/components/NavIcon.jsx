@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
-import { CgClose } from 'react-icons/cg';
+// import { IoMenu} from 'react-icons/lo';
+import { MdMenu } from 'react-icons/md';
+// import { FaBeer } from 'react-icons/fa';
+import { ReactComponent as MenuIcon } from "../assets/img/svg/menuIcon.svg"
+
 
 
 function NavIcon({onMenuOpen}) {
@@ -12,7 +15,7 @@ function NavIcon({onMenuOpen}) {
     }
   return (
     <button className="menuIcon" onClick={handleClick}>
-        {closed?<FaBars size="3rem"/>:<CgClose size="3rem"/>}
+        <MenuIcon/>
     </button>
   );
 }
