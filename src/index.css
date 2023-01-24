@@ -188,7 +188,9 @@ button{
   position: relative;
   transform: translateY(30%);
 }
-
+.react-player__preview{
+  border-radius: 16px;
+}
 #about {
   background-color: #000;
 }
@@ -656,10 +658,7 @@ footer .mailAddress {
   .aboutHeading h2 {
     font-size: 2.1rem;
   }
-  .player,
-  .player svg {
-    height: 500px !important;
-  }
+  c
   .successWrapper li {
     padding: 0.65rem;
   }
@@ -695,16 +694,16 @@ footer .mailAddress {
   }
  
   nav>div{
-    position: fixed;
-    
+    position: fixed;    
     right: 0;
     top: 0;
     background-color: #fff;
     width: min(100%, 450px);
-    padding: 24px 0 40px;
+    padding: 24px 20px 40px;
     transform: translateX(100%);
     transition: 0.5s ease-in;
     z-index: 999;
+    box-sizing: border-box;
   }
   .navBar >*{
     color: #000;
@@ -975,7 +974,6 @@ footer .mailAddress {
     top: 0;
     transform: none;
   }
-
   .slogan {
     font-size: 2.5rem;
   }
@@ -1012,6 +1010,9 @@ footer .mailAddress {
   .aboutImgWrapper img {
     width: 60%;
   }
+  .player, .player svg {
+    height: 327px !important;
+}
 }
 @media screen and (max-width: 420px) {
   .titleWrapper {
