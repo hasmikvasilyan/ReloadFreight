@@ -4,6 +4,33 @@ import { ReactComponent as FbIcon } from "../../assets/img/svg/fbIcon.svg";
 import { ReactComponent as InstaIcon } from "../../assets/img/svg/instaIcon.svg";
 import BecomePartner from "../../components/BecomePartner";
 
+const navlinks = [
+  {
+    id: 1,
+    name: "Success stroies",
+    to: "success",
+    isBtn: false,
+  },
+  {
+    id: 2,
+    name: "Partners",
+    to: "partners",
+    isBtn: false,
+  },
+  {
+    id: 3,
+    name: "Landstar",
+    to: "landstar",
+    isBtn: false,
+  },
+  {
+    id: 4,
+    name: "Contacts",
+    to: "contacts",
+    isBtn: false,
+  },
+];
+
 function Footer() {
   return (
     <footer id="contacts">
@@ -14,7 +41,21 @@ function Footer() {
             <img src={logo} alt="reload freight" />
           </Link>
           <nav className="footerMenu">
-            <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
+          {navlinks.map((link) => (
+          
+            <Link
+              key={link.id}
+              className="text"
+              to={link.to}
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+            >
+              {link.name}
+            </Link>
+          
+        ))}
+            {/* <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
               Success stroies
             </Link>
             <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
@@ -25,7 +66,7 @@ function Footer() {
             </Link>
             <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
               Contacts
-            </Link>
+            </Link> */}
           </nav>
           <ul className="social">
             <li>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/img/svg/logo.svg";
 import Navigation from "../../components/Navigation";
-import { ReactComponent as WatchIcon } from "../../assets/img/svg/watchIcon.svg";
+import BtnGroup from "../../components/BtnGroup";
 
 function Top() {
   return (
@@ -18,15 +18,7 @@ function Top() {
             <h1 className="slogan">
               <span>The one & only</span> Landstar agency in Armenia
             </h1>
-            <div className="btnGroup">
-              <Link to="/" className="btn btnFilled">
-                Join the circle
-              </Link>
-              <Link to="/" className="btn btnOutline">
-                <WatchIcon />
-                <span>Watch the video</span>
-              </Link>
-            </div>
+            <BtnGroup/>
           </div>
         </div>
       </div>

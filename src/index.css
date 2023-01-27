@@ -698,7 +698,7 @@ footer .mailAddress {
     right: 0;
     top: 0;
     background-color: #fff;
-    width: min(100%, 450px);
+    width: min(100%, 480px);
     padding: 24px 20px 40px;
     transform: translateX(100%);
     transition: 0.5s ease-in;
@@ -963,7 +963,8 @@ footer .mailAddress {
     padding-bottom: 40px;
   }
   .topBack {
-    background-size: 68%;
+    background-size: 83%;
+    background-position: 196% 0%;
   }
   .top .container {
     display: flex;

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import * as Scroll from "react-scroll";
 import { Link } from "react-scroll";
-// import NavIcon from "./NavIcon";
 import { ReactComponent as CloseIcon } from "../assets/img/svg/closeIcon.svg";
 import { ReactComponent as MenuIcon } from "../assets/img/svg/menuIcon.svg";
 import Logo from "./Logo";
