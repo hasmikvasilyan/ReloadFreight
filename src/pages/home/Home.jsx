@@ -6,13 +6,13 @@ import Footer from "./Footer";
 
 
 
-function Home() {
+function Home({storyData}) {
   return (
     <>
       <Top/>
       <Stats/>
       <About/>
-      <SuccessStory/>
+      <SuccessStory storyData={storyData}/>
       <Footer/>
     </>
   );

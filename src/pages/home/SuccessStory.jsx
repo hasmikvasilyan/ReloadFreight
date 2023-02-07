@@ -11,12 +11,12 @@ import funIcon from "../../assets/img/svg/funIcon.svg";
 import commissionIcon from "../../assets/img/svg/commissionIcon.svg";
 import growthIcon from "../../assets/img/svg/growthIcon.svg";
 import calendarIcon from "../../assets/img/svg/calendarIcon.svg";
-import storyOne from "../../assets/img/png/storyOne.png";
-import storyTwo from "../../assets/img/png/storyTwo.png";
-import storyThree from "../../assets/img/png/storyThree.png";
-import perkImgOne from "../../assets/img/png/aboutImgOne.png";
 
+import perkImgOne from "../../assets/img/png/aboutImgOne.png";
+import {useNavigate} from 'react-router-dom'
 import StoryItem from "./StoryItem";
+import { Link } from 'react-router-dom'
+
 
 const valuesData = [
   {
@@ -98,27 +98,67 @@ const perksData = [
     icon: calendarIcon,
   },
 ];
-const storyData = [
-  {
-    id: 1,
-    title: "Headline of the first success story",
-    imgUrl: storyOne,
-    date: "07.06.2022",
-  },
-  {
-    id: 2,
-    title: "Headline of the first success story",
-    imgUrl: storyTwo,
-    date: "24.06.2022",
-  },
-  {
-    id: 3,
-    title: "Headline of the first success story",
-    imgUrl: storyThree,
-    date: "17.07.2022",
-  },
-];
-function SuccessStory() {
+// const storyData = [
+//   {
+//     id: 1,
+//     title: "The first rebranding",
+//     imgUrl: storyOne,
+//     date: "07.06.2022",
+//   },
+//   {
+//     id: 2,
+//     title: "Team Captains",
+//     imgUrl: storyTwo,
+//     date: "24.06.2022",
+//   },
+//   {
+//     id: 3,
+//     title: "Coologistics",
+//     imgUrl: storyThree,
+//     date: "17.07.2022",
+//   },
+//   {
+//     id: 4,
+//     title: "500k",
+//     imgUrl: storyOne,
+//     date: "07.06.2022",
+//   },
+//   {
+//     id: 5,
+//     title: "1 million",
+//     imgUrl: storyTwo,
+//     date: "24.06.2022",
+//   },
+//   {
+//     id: 6,
+//     title: "New rebranding",
+//     imgUrl: storyThree,
+//     date: "17.07.2022",
+//   },
+//   {
+//     id: 7,
+//     title: "Landstar fortune 500",
+//     imgUrl: storyOne,
+//     date: "07.06.2022",
+//   },
+//   {
+//     id: 8,
+//     title: "Tbilisi Office",
+//     imgUrl: storyTwo,
+//     date: "24.06.2022",
+//   },
+//   {
+//     id: 9,
+//     title: "Lebanon Office",
+//     imgUrl: storyThree,
+//     date: "17.07.2022",
+//   },
+// ];
+function SuccessStory({storyData}) {
+  // const formattedDate = new Date(date);
+  // const [day,month,year]= [formattedDate.getDate(),formattedDate.toLocaleString('en-us', { month: 'short' }), formattedDate.getFullYear()];
+  
+  const navigate=useNavigate();
   return (
     <section className="successStoryContainer">
       <div className="container">
@@ -163,11 +203,13 @@ function SuccessStory() {
         <div className="successContainer">
           <div className="titleWrapper">
             <h3 className="title">Success stories</h3>
-            <button className="btn btnFilled">See All</button>
+            <button className="btn btnFilled" onClick={() => navigate('/success-stories')}>See All</button>
           </div>
           <ul className="storyWrapper">
-            {storyData.map((data) => (
-              <StoryItem key={data.id} title={data.title} imgUrl={data.imgUrl} date={data.date} />
+            {storyData.slice(0,3).map((data) => (
+              <Link key={data.id} to={`/success-stories/${data.id}`} className="storyLink"> 
+                <StoryItem id={data.id} title={data.title} imgUrl={data.imgUrl} date={data.date} />
+              </Link>
             ))}
           </ul>
         </div>

@@ -7,7 +7,7 @@ import Logo from "./Logo";
 const navlinks = [
   {
     id: 1,
-    name: "Success stroies",
+    name: "Success stories",
     to: "success",
     isBtn: false,
   },
