@@ -21,7 +21,7 @@ const storiesData=[
       date: "2022-08-02T13:32"
   }]
 
-function StoryDetails() {
+function StoryDetails({storyData}) {
     const {storyId}=useParams();
     const navigate=useNavigate();
   return (
@@ -29,11 +29,11 @@ function StoryDetails() {
     <div className='container blog'>
         <button className="btn goBack" onClick={()=>navigate(-1)}> <img src={backIcon} alt="join realod freight" /> Join the circle</button>
         <Story 
-            id={storiesData[0].id}
-            img={storiesData[0].img}
-            title={storiesData[0].title}
-            text={storiesData[0].text}
-            date={storiesData[0].date}    
+            id={storyData[0].id}
+            imgUrl={storyData[0].imgUrl}
+            title={storyData[0].title}
+            text={storyData[0].text}
+            date={storyData[0].date}    
         />
         <div className="smallerContainer">
             <p className="text">Working from home can be so much easier and more comfortable with the appropriate accessories in place. This said, remote work gadgets can help individuals reap the full benefits of working from home
@@ -54,11 +54,11 @@ We’ve taken some of the most common issues employees might face along with mor
 
         </div> 
         <div className='storiesContainer'>
-                {storiesData.map(story=>(
+                {storyData.slice(-2).map(story=>(
                     <Story 
                         key={story.id}
                         id={story.id}
-                        img={story.img}
+                        imgUrl={story.imgUrl}
                         title={story.title}
                         date={story.date}                        
                     />

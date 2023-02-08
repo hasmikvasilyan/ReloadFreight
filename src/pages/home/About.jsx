@@ -8,13 +8,13 @@ const aboutData = [
   {
     id: 1,
     title: "About us",
-    text: "Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.",
+    text: "Ever since Reload Freight’s establishment in 2009, we have been a top-quality provider of freight brokerage services. Our professionalism and work ethic has consistently demonstrated the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have displayed the success of our customer-centric approach to our partners and portrayed the Diamond standard of logistics.With 30+ years of transportation & logistics experience and financial stability, we are still going strong, with 5 branches in different countries and many more to come.",
     img: aboutImg,
   },
   {
     id: 2,
     title: "What we do",
-    text: "Since its inception in 2009, Reload Freight has been a top quality provider of freight brokerage services, consistently demonstrating the agility and innovative spirit necessary to adapt to the ever-evolving logistics industry. As the #1 West Coast LandStar Agent, we have demonstrated the success of our customer-centric approach to our partners. 30+ years of transportation & logistics experience and financial stability.",
+    text: "You can rely on Reload Freight to help you move freight quickly, securely, and cost-efficiently. Once you choose us, you've got someone who can do it all. Which means you can focus on growing your business. We provide safe, reliable transportation, logistics services, and transportation management solutions. Our highly trained and experienced agents are available 24/7 to instantly answer any questions and assist you with any kind of request.",
     img: aboutImg,
     order: "reverse",
   },
