@@ -55,18 +55,7 @@ function Footer() {
             </Link>
           
         ))}
-            {/* <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
-              Success stroies
-            </Link>
-            <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
-              Partners
-            </Link>
-            <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
-              Landstar
-            </Link>
-            <Link to="test1" spy={true} smooth={true} offset={50} duration={500} className="text">
-              Contacts
-            </Link> */}
+           
           </nav>
           <ul className="social">
             <li>
